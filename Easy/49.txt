@@ -1,0 +1,41 @@
+Write a program to merge lines of numbers whose sum is even. 
+Each line may contain a different amount of numbers. 
+
+Input 
+Line 1: An integer N for the number of next lines. 
+Next N lines: Space separated numbers (only integers). 
+
+Output 
+The concatenation of lines whose sum is even in the same order as input, separated by a space. 
+0 if there is no even lines. 
+
+Constraints 
+2 ≤ N ≤ 20 
+0 ≤ number ≤ 100 
+
+Example 
+Input 
+2 
+1 2 3 
+4 5 6 
+
+Output 
+1 2 3
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const N = parseInt(readline());
+
+let result = [];
+for (let i = 0; i < N; i++) {
+    const line = readline().split(" ").map(Number);
+    const sum = line.reduce((acc,value)=> acc + value,0);
+
+    if(sum%2===0) result.push(...line);
+}
+
+console.log(result.length? result.join(" ") : "0")

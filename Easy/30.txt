@@ -1,0 +1,39 @@
+You are given a string that is already a palindrome. 
+Your task is to write a function that reverses the process 
+and generates the original string that, when reversed and appended 
+to itself (overlapping one character in the middle if needed), 
+forms the given palindrome. 
+
+Input 
+A single string s that is a palindrome. 
+
+Output 
+The original string s' as described in the statement. 
+
+Constraints 
+1 ≤ length of s ≤ 10 
+
+Example 
+Input 
+bob 
+
+Output 
+bo
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//we only have to print the first half of the string as original string
+
+//reading input
+const s = readline();
+let original = "";
+
+//if length is even original string will be the half of the s (eg: s is "abba" original will be "ab" - half of s)
+if(s.length%2 === 0) original = s.slice(0,n/2);
+else original = s.slice(0,Math.ceil(n/2));
+//if length is odd original string will be the half of the s in integer + 1 (eg: s is "bob" original will be "bo" - half of s in integer + 1)
+
+console.log(original);

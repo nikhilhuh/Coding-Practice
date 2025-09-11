@@ -1,0 +1,108 @@
+The game mode is REVERSE: 
+You do not have access to the statement. 
+You have to guess what to do by observing the following set of tests: 
+
+Test 1 
+Input 
+707
+
+Expected output 
+LOL 
+
+Test 2 
+Input
+38 
+
+Expected output 
+BE 
+
+Test 3 
+Input 
+77345663
+
+Expected output  
+EGGSHELL 
+
+Test 4 
+Input 
+8008
+
+Expected output 
+**** 
+
+Test 5 
+Input
+800800761
+
+Expected output  
+IGLOO**** 
+
+Test 6 
+Input
+376616
+
+Expected output  
+GIGGLE 
+
+Test 7 
+Input
+002 
+
+Expected output 
+ZOO 
+
+Test 8 
+Input
+53188048008553580
+
+Expected output  
+OBSESS****HOBBIES 
+
+Test 9 
+Input
+128345028521582168501286125315234885123481523485123480785234
+
+Expected output  
+HEZSBLOBHEZISBHEZSIBHEZISBBHEZSIESZIGBZIOSBGIZBSIZSBZOSHEBZI 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//the question is simple -> input is a string of integers and we have to map the digits to its appropriate alphabet 
+//seeing the inputs and then if the string is 8008 we have to make it appear as **** , and the result will be the 
+//reverse of this formed string
+
+//read input
+const num = readline();
+
+const map = {
+    '0': 'O',
+    '1': 'I',
+    '2': 'Z',
+    '3': 'E',
+    '4': 'H',
+    '5': 'S',
+    '6': 'G',
+    '7': 'L',
+    '8': 'B',
+    '9': 'g'
+};
+
+let result = "";
+let i=0;
+
+while(i<num.length){
+        if(num.slice(i,i+4) === "8008"){
+            result += "****";
+            i=i+4;
+            continue;
+        } else{
+            const ch = num[i];
+            result+= map[num[i]];
+            i++;
+        }
+}
+
+console.log(result.split("").reverse().join(""));

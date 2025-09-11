@@ -1,0 +1,52 @@
+The game mode is REVERSE: 
+You do not have access to the statement. 
+You have to guess what to do by observing the following set of tests: 
+
+Test 1 
+Input 
+5
+Expected output 
+EEEEE 
+
+Test 2 
+Input 
+17
+
+Expected output 
+QQQQQQQQQQQQQQQQQ 
+
+Test 3 
+Input 
+1
+
+Expected output 
+A 
+
+Test 4 
+Input 
+3
+
+Expected output 
+CCC 
+
+Test 5 
+Input
+25
+
+Expected output 
+YYYYYYYYYYYYYYYYYYYYYYYYY
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//the question wants us to input n- the index of the character in Captial alphabet series(65-90) 
+//and print it n- times in one line
+
+//reading input
+const n = parseInt(readline());
+const s = String.fromCharCode(64 + n).repeat(n);
+//64 + n will give us the alphabet (A-Z) at n ( consider n is 1 -> 64 + 1 -> "A") and .repeat will make it repeat n times
+
+console.log(s);

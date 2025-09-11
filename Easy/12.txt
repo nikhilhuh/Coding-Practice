@@ -1,0 +1,41 @@
+The arithmetic mean (or mean or average) is the most commonly used and readily 
+understood measure of central tendency. In statistics, the term average refers to 
+any of the measures of central tendency. 
+
+The arithmetic mean is defined as being equal to the sum of the numerical values 
+of each and every observation divided by the total number of observations. 
+
+For this mission, you are given a non-empty list of natural numbers. 
+You must compute their arithmetic mean. 
+
+Input 
+Line 1: The number of values in the list, N 
+Line 2: N space separated integers (each called X) 
+
+Output 
+Line 1: The arithmetic mean of the list as a float or an integer 
+
+Constraints 
+2 ≤ N ≤ 100 
+-1000 < X < 1000 
+
+Example 
+
+Input 
+5 
+1 2 3 4 5 
+
+Output 
+3 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input
+const n = parseInt(readline());
+const sum = readline().split(" ").map(Number).reduce(( acc, value) => acc + value, 0);
+const average = sum / n;
+
+console.log(average);

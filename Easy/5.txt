@@ -1,0 +1,42 @@
+Base on input you only have to guess the output
+If you are given 5 output must be -6 
+
+Quick help - you have to use one of bitwise operators
+
+Input 
+An integer num 
+
+Output 
+An integer result, which is the transformed value of num 
+
+Constraints 
+possible solutions
+ 
+Example 
+
+Input 
+5 
+
+Output 
+-6
+
+Input 
+0
+
+Output 
+-1
+
+Input 
+-3
+
+Output 
+2
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input 
+const num = parseInt(readline());
+console.log(~num); //bitwise transformation (NOT)

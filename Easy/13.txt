@@ -1,0 +1,77 @@
+The game mode is REVERSE: 
+You do not have access to the statement. 
+You have to guess what to do by observing the following set of tests
+
+Test 1 
+Input 
+2
+
+Expected output 
+22
+2
+
+Test 2 
+Input 
+3
+
+Expected output 
+333
+33
+3
+
+Test 3 
+Input 
+4
+
+Expected output
+4444 
+444 
+44 
+4 
+
+Test 4 
+Input 
+5
+
+Expected output 
+55555
+5555
+555
+55
+5
+
+Test 5 
+Input
+6
+
+Expected output 
+666666 
+66666 
+6666 
+666 
+66 
+6 
+
+Test 6 
+Input 
+7
+
+Expected output 
+7777777 
+777777 
+77777 
+7777 
+777 
+77 
+7
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading inputs
+const n = parseInt(readline());
+for(let i=n;i>=1;i--){
+        console.log(n.toString().repeat(i));
+}

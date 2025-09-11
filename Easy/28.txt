@@ -1,0 +1,48 @@
+You have to find the biggest terrain in a list and output its terrainId. 
+A terrain is a rectangle and its area is equal to width * height.
+
+Input 
+The first line : terrainCount : the number of terrains. 
+The next terrainCount lines : Each terrain has 3 integers : 
+a width, a height and a terrainId separated by spaces. 
+
+Output 
+The terrainId of the biggest terrain. 
+
+Constraints 
+0 < terrainCount < 20
+0 < width, height < 1000 
+All terrains have different areas in each case.
+
+Example 
+Input 
+3 
+5 10 0 
+6 9 1 
+7 8 2 
+
+Output 
+2
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input
+const terrainCount = parseInt(readline());
+
+let maxArea = -1;
+let maxTerrainId = -1;
+
+for(let i=0;i<terrainCount;i++){
+        const [height, width, terrainId] = readline().split(" ");
+        const area = height * width;
+
+        if(area > maxArea){
+                maxArea = area;
+                maxTerrainId = terrainId;
+        }
+}
+
+console.log(maxTerrainId);

@@ -1,0 +1,51 @@
+You are a security guard on a weird planet, whose role is to remove 
+impostors from the crowd coming in. For unique identification, everyone 
+in the crowd has a identification number. 
+You are instructed to allow the permit based on their identification number.
+
+The rule of this weird planet is simple, If the identification number is a 
+power of 2 then don't allow the person, otherwise allow the person. 
+
+Input 
+Line 1: n The number of persons. 
+Line 2: consisting of n space separated identification numbers x of the persons. 
+
+Output 
+A line consisting of n space separated values v corresponding to n persons. 
+v will be 0 for person which is disallowed and 1 for person which is allowed. 
+
+Constraints 
+1 <= n <= 20 
+1 <= x < 3^30 
+
+Example 
+Input 
+1 
+2 
+
+Output 
+0
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const N = parseInt(readline());
+const persons = readline().split(" ").map(BigInt); //as powers can be a big integer
+
+function isPowerOf2(x) {
+        if(x<1) return false;
+        while(x % 2 === 0){
+                x /= 2;
+        }
+        return x === 1;
+}
+
+const result = persons.map(x =>{
+        if(isPowerOf2(x)) return 0;
+        else return 1;
+})
+
+console.log(result.join(" "));

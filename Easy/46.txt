@@ -1,0 +1,73 @@
+The task is to decode a secret message. 
+Each message is encoded using a simple Caesar cipher. 
+In addition a word is provided which is guaranteed to exist in the secret message. 
+
+Refresher on Caesar cipher (safe to skip if you are familiar with this cipher) 
+To encrypt the message "HELLO" with a Caesar cipher with a shift of 1, shift every letter by one. 
+H becomes I, E becomes F, and so on. 
+The encrypted message is "IFMMP". 
+If the shift was 2, the encrypted message would be "JGNNQ". 
+If the shift reaches the end of the letters then it wraps around to the beginning. 
+
+For example, if the whole vocabulary is ABC, and the shift is 1, then A become B, B becomes C, C becomes A. 
+For this puzzle, the shift is not provided but the solution involves discovering it. 
+The shift may be different for every test case. There is only one unique solution to each test. 
+
+Specifically, there is only one shift per test which decodes the message to contain the given word. 
+
+Input 
+Line 1: ALPHABET The characters in the cipher 
+Line 2: MESSAGE The encrypted message 
+Line 3: WORD The word that is in the message 
+
+Output 
+Line 1 Decrypted message 
+
+Constraints 
+ALPHABET contains only visible basic ascii characters such as 'a', '8', '_'. 
+No spaces, tabs, bell, or emoji. 
+1 ≤ N ≤ 10 
+All strings are 200 characters or less. 
+
+Example 
+Input 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ_ 
+IFMMPAXPSME 
+WORLD 
+
+Output 
+HELLO_WORLD
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const ALPHABET = readline();
+const MESSAGE = readline();
+const WORD = readline();
+
+const n = ALPHABET.length;
+
+// Try all possible shifts
+for (let shift = 0; shift < n; shift++) {
+    let decoded = "";
+
+    for (let ch of MESSAGE) {
+        const idx = ALPHABET.indexOf(ch);
+        if (idx === -1) {
+            decoded += ch; // if character not in alphabet, keep as is
+        } else {
+            // shift backwards
+            const newIdx = (idx - shift + n) % n;
+            decoded += ALPHABET[newIdx];
+        }
+    }
+
+    // Check if decoded contains WORD
+    if (decoded.includes(WORD)) {
+        console.log(decoded);
+        break;
+    }
+}

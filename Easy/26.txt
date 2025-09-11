@@ -1,0 +1,38 @@
+A student is typing notes very quickly and often forgets to use the correct case for letters.
+He wants a program that will automatically switch the case of every character in his notes:
+
+If a character is lowercase, convert it to uppercase.
+If a character is uppercase, convert it to lowercase.
+Any non-alphabetical character (digits, punctuation, spaces) should remain unchanged.
+
+INPUT:
+A single line string s containing letters, digits, spaces, or punctuation.
+
+OUTPUT:
+The string with the case of every letter toggled.
+
+CONSTRAINTS:
+0 < length of s ≤ 1000
+
+EXAMPLE:
+Input
+Hello World!
+
+Output
+hELLO wORLD!
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input
+const s = readline();
+
+for(let ch of s){
+        if (ch >= 'a' && ch <= 'z') result += ch.toUpperCase();
+        else if (ch >= 'A' && ch <= 'Z') result += ch.toLowerCase();
+        else result += ch;  // keep non-letters unchanged
+}
+
+console.log(s);

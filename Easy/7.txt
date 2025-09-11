@@ -1,0 +1,42 @@
+Find the greatest common factor of a and b.
+
+Input
+Line 1: An integer a.
+Line 2: An integer b.
+
+Output
+Line 1: The greatest common factor of a and b.
+
+Constraints
+1 ≤ a ≤ 1,000,000
+1 ≤ b ≤ 1,000,000
+
+Example
+
+Input
+10
+5
+
+Output
+5
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//we are going to use Euclidean Algorithm - fastest method to fing gcd
+//reading inputs
+const a = parseInt(readline());
+const b = parseInt(readline());
+
+function gcd(x,y) {
+        while(y !==0 ){
+                let temp = y;
+                y = a % y;
+                x = temp;
+        }
+        return x;
+}
+
+console.log(gcd(a,b));

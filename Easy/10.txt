@@ -1,0 +1,56 @@
+You are given a list of integers.
+Your task is to compute the sum of all numbers except the largest one.\
+
+Note: Only one occurrence of the maximum element should be excluded from the sum, even if it appears multiple times in the list.
+
+
+Input
+Line 1: an integer n (number of elements)
+Line 2: n space-separated integers
+
+Output
+A single integer: the sum of all numbers except the largest element
+
+Constraints
+2 ≤ n ≤ 10
+-10 ≤ each integer ≤ 10
+
+Example
+
+Input
+5
+5 2 8 3 7
+
+Output
+17
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+const n = parseInt(readline()); 
+const arr = readline().split(" ").map(Number); //map(Number) converts each element to Number
+
+const sum = arr.reduce((a, b) => a + b, 0);
+const maxVal = Math.max(...arr);
+
+console.log(sum - maxVal);
+
+//another way
+
+const n = parseInt(readline());
+const numbers = readline().split(" ").map(Number);
+
+// sort in ascending order
+numbers.sort((a, b) => a - b);
+
+let sum = 0;
+// sum everything except the last (largest) element
+numbers.forEach((num, idx) => {
+  if (idx !== numbers.length - 1) {
+    sum += num;
+  }
+});
+
+console.log(sum);

@@ -1,0 +1,46 @@
+The game mode is REVERSE: 
+You do not have access to the statement. 
+You have to guess what to do by observing the following set of tests:
+
+Test 1 
+Input 
+I love you.
+
+Expected output 
+I evol you. 
+
+Test 2 
+Input 
+See you on Sunday :-)
+
+Expected output  
+See uoy on yadnus :-) 
+
+Test 3 
+Input 
+Hello there my friend
+
+Expected output  
+Hello ereht my dneirf 
+
+Test 4 
+Input 
+Let's meet at 5pm
+
+Expected output 
+Let's teem at mp5
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//the input is a stribng
+const message = readline().split(" ");
+
+//the question is asking us to print the string with alternate words starting from second word reversed
+const result = message.map(( word, index)=> {
+        if(index%2) return word.split("").reverse().join("");  //alternate word starting from 1-st index
+        else return word;
+})
+
+console.log(result.join(" "));

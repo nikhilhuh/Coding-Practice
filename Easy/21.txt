@@ -1,0 +1,52 @@
+You are in a Mathematics class. 
+The teacher has just taught you how to add, multiply and square. 
+Now, the teacher gives you x numbers n (x is odd) and 
+asks you to find the product of the sum of odd numbers and the sum of even numbers. 
+Furthermore, he wants you to add the square of the middle number to the result. 
+
+To prevent cheating, he wants you to show your steps in this format: 
+Sum(even) x Sum(odd) + middle^2 = result 
+
+P.S. Please look at the output format. 
+
+Input 
+Line 1: an integer x, the size of the numbers list. 
+Line 2: x space-separated integers n. 
+
+Output 
+The steps in one line following the required format. 
+
+Constraints 
+x is odd 
+-100 < n < 100 
+
+Example 
+Input 
+9 
+0 1 2 3 4 5 6 7 8 
+
+Output 
+20 x 16 + 4^2 = 336
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading inputs
+const x = parseInt(readline());
+const numbers = readline().split(" ").map(Number);
+
+let even = 0;
+let odd = 0;
+
+numbers.forEach((n)=>{
+        if(n%2===0) even+=n;
+        else odd+=n;
+})
+
+const middle = numbers[Math.floor(x/2)];
+
+const result = even * odd + Math.pow(middle,2);
+
+console.log(`${even} x ${odd} + ${middle}^2 = ${result}`);

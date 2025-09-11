@@ -1,0 +1,60 @@
+The game mode is REVERSE: 
+You do not have access to the statement.
+You have to guess what to do by observing the following set of tests:
+
+Test 1
+Input
+1
+Hello World !
+
+Expected output
+0
+
+Test 2
+Input
+2
+l337 5p3k 15 c00l
+5pr34d 7h3 w0rd !
+
+Expected output
+9
+6
+
+
+Test 3
+Input
+2
+abcd1234
+a1b2c3d4
+
+Expected output
+4
+4
+
+Test 4
+Input
+2
+xxxxxxxxxx
+1111111111
+
+Expected output
+0
+10 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//the first line of input is the number of strings to input
+const n = parseInt(readline());
+
+//the question is asking us to print the number of digits in each string in separate lines
+for(let i=1;i<=n;i++){
+        const s = readline();
+        let count = 0;
+        for(let ch of s){
+                if(ch>='0' && ch<='9') count++;
+        }
+        console.log(count);
+}

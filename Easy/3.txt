@@ -1,0 +1,37 @@
+Given a String you must output the average ASCII value of that string. 
+
+Input
+A string 
+
+Output
+Average ASCII value of that String rounded down. 
+
+Constraints 
+String contains no spaces
+
+Example 
+
+Input
+abc
+
+Output
+98 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading string from input and making an array of the characters
+const s = readline().trim().split("");
+
+//looping the characters and adding the ascii value of them to sum
+let sum = 0;
+s.forEach((ch)=> {
+        sum += ch.charCodeAt(0);
+})
+
+//calculating average
+const average = Math.floor(sum / s.length); 
+
+console.log(average);

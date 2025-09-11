@@ -1,0 +1,36 @@
+Is there enough bread to feed the people for the amount of time? 
+
+Input 
+Line 1: An integer b amount of bread 
+Line 2: An integer p amount of people 
+Line 3: An integer r rate of bread consumed per hour per person 
+Line 4: An integer t the proposed time in hours 
+
+Output 
+Line 1: A string a for if there is Enough bread, 
+Not enough bread or Just enough bread 
+
+Example 
+Input 
+5 
+1 
+1 
+5
+
+Output
+Just enough bread
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const b = parseInt(readline());
+const p = parseInt(readline());
+const r = parseInt(readline());
+const t = parseInt(readline());
+
+const totalNeeded = p * r * t;
+
+if(b > totalNeeded) console.log("Enough bread");
+else if(b == totalNeeded) console.log("Just enough bread");
+else console.log("Not enough bread");

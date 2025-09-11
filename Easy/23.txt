@@ -1,0 +1,33 @@
+Wwe have num as an input, we want you to print the sum of numbers 
+which are divisible by 7 (from 1 to num (Inclusive)) 
+
+Input 
+A number which is num 
+
+Output 
+print the sum of numbers which are divisible by 7 (from 1 to num (Inclusive)) 
+
+Constraints 
+1<= num <= 200 
+
+Example 
+Input 
+42 
+
+Output 
+147 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input
+const num = parseInt(readline()); 
+let sum = 0;
+for(let i=7;i<=num;i=i+7){ 
+        sum+=i;
+}
+
+console.log(sum);
+        

@@ -1,0 +1,62 @@
+You are supplied with coordinates X and Y
+And a section of text H lines long and W characters across.
+
+Find the character located at X and Y in the text.
+Where the first character of the first line is X: 0, Y: 0
+
+The Y increases by 1 per line of text, the X increases by 1 per character in a line.
+
+If the coordinate does not exist, output "Invalid coordinate" instead.
+
+Input
+Line 1: An integer H for the number of lines of text.
+Line 2: An integer W for the number of characters per line of text.
+Line 3: Two integers, the X and Y coordinate of the character to locate.
+Next H lines: The text to search, inputted line by line as strings.
+
+Output
+A single character at the location of X Y,
+Or "Invalid coordinate" if the coordinates provided were not valid.
+
+Constraints
+2 ≤ H, W ≤ 50
+Potentially valid coordinates:
+0 ≤ X, Y ≤ 50
+
+Example
+Input
+5
+10
+6 2
+(bE+HrU;dP
+}H+ayitQa!
+$4SCQ,SQF8
+h[/y&6D&%}
+$rLBZ;+PRq
+
+Output
+S
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const H = parseInt(readline());
+const W = parseInt(readline());
+const [X, Y] = readline().split(" ").map(Number);
+
+// Check if coordinates are valid
+if (X < 0 || X >= W || Y < 0 || Y >= H) {
+    console.log("Invalid coordinate");
+} else {
+    let targetChar;
+    for (let i = 0; i < H; i++) {
+        const row = readline();
+        if (i === Y) {
+            targetChar = row[X];
+        }
+    }
+    console.log(targetChar);
+}

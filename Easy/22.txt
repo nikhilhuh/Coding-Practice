@@ -1,0 +1,56 @@
+When flipped upside down, the digits 2, 3, 4, 5, and 7 do not make sense. 
+Yet, the digits 6 and 9 become 9 and 6 respectively, while the remaining digits 
+0, 1, and 8 do not change its value. 
+
+Given the string representation of a number, return the string representation 
+of the number formed by flipping the given number upside down. 
+If the upside-down number does not make sense, return Impossible instead. 
+
+Input 
+Line 1: A positive integer N; the number of rows of input. 
+Next N lines: A digit string number representing a number. 
+
+Output 
+N lines, following the order of the input. 
+Each line contains either the corresponding flipped number or Impossible. 
+
+Constraints 
+1 ≤ N ≤ 50 
+1 ≤ length of number ≤ 100 
+number is valid (no leading zeros, no non-numeric characters) 
+
+Example 
+Input 
+1 
+680 
+
+Output 
+980
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading inputs
+const N = parseInt(readline());
+
+const flip = {
+        0: 0,
+        1: 1,
+        6: 9,
+        8: 8,
+        9: 6,
+}
+for(let i=1;i<=N;i++){
+        const x = readline();
+        let s = "";
+        for(let ch of x){
+                if(flip[ch] === undefined) {
+                        s = "Impossible";
+                        break;
+                } 
+                s += flip[ch];
+        }
+        console.log(s);
+}

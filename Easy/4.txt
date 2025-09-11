@@ -1,0 +1,51 @@
+Find the nth digit in a string of all palindromic numbers
+'123456789112233445566778899101'.... 
+
+Notes: - Palindromic numbers are numbers that are palindromes (ex. 101, 202) 
+
+If you get 1 as input you must print 1 as the first character in the string is 1 
+
+Input Line 1
+n, an integer 
+
+Output Line 1
+ans, an integer 
+
+Constraints 
+0 < n < 1000 
+
+Example 
+
+Input 
+1 
+
+Output 
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//question says that we have to find the 'n'-th digit of all the palindromic numbers till 'n'
+//basiclly 'n' is the length of the series we have to generate
+
+//first read input of 'n'
+const n = parseInt(readline());
+
+//now lets make a function to find if the number is palindrome or not
+function isPalindrome(num) {
+        let s = num.toString(); //converting num to string for converting to array by split and using reverse on array
+        return s === s.split("").reverse().join(""); //returns if the number is palindrome or not 
+}
+
+//generating palindromic series until length >='n'
+let s = "";
+let i = 0;
+while (s.length < n) {
+        if(isPalindrome(i)) s += i.toString();
+        i++;
+}
+
+//output the n-th digit (nth digit in indexing will be n-1)
+console.log(s[n - 1]);

@@ -1,0 +1,50 @@
+You are a powerful magician-developer moving through a strange valley 
+where towers magically appear. Each tower has a height, and you have the 
+ability to create or destroy towers. 
+- Creating a tower cost the energy same as its height. 
+- Destroying a tower gives you the same energy as its height. 
+
+if A is positive, this means you create a tower of height A, which costs you A units of energy. 
+If A is negative, this means you destroy a tower of height |A|, which gives you |A| units of energy. 
+
+Your objective is to calculate the energy remaining after performing a series of actions on the towers. 
+
+Input 
+Line 1: An integer N for the number of actions to perform. 
+Next N lines: An integer A for an action. 
+
+Output 
+Line 1: An integer representing the energy remaining after all actions have been performed. 
+
+Constraints 
+1 ≤ N ≤ 10^4. 
+-10^4 ≤ A ≤ 10^4. 
+
+Example 
+Input 
+5 
+4 
+-2 
+3 
+-1 
+2 
+
+Output 
+-6
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const N = parseInt(readline());
+let energy = 0;
+
+for(let i-1;i<=N;i++){
+        const height = parseInt(readline());
+        if(height > 0) energy -= A;
+        else energy += Math.abs(A);
+}
+
+console.log(energy);

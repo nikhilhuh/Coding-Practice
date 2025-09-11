@@ -1,0 +1,54 @@
+You are given a sequence of operations that modify a variable x.
+The variable x starts at 0.
+
+Each operation is one of the following:
+
+x++ → increase x by 1
+
+++x → increase x by 1
+
+x-- → decrease x by 1
+
+--x → decrease x by 1
+
+Determine the final value of x after performing all operations.
+
+Input
+Line 1: An integer n representing the number of operations.
+Next n lines: A string operation representing one operation (x++, ++x, x--, or --x).
+
+Output
+Line 1: Print a single integer — the final value of x.
+
+Constraints
+1 ≤ n ≤ 100
+
+Example
+
+Input
+4
+x++
+++x
+--x
+--x
+
+Output
+0
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//reading input 
+const n = parseInt(readline());
+
+//starting x at 0
+let x = 0;
+for(let i =0; i<n;i++){
+        const operation = readline();
+        if(operation.includes("++")) x+=1;
+        else x-=1;
+}
+
+consoel.log(x);

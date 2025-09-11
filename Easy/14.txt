@@ -1,0 +1,36 @@
+You are given a string of digits. 
+Your task is to rearrange the digits such that 
+all even digits come first, followed by all odd digits, 
+while maintaining their relative order. 
+
+Input 
+Line 1: A string S of digits (0-9) 
+
+Output 
+Line 1: The reordered string 
+
+Constraints 
+1 ≤ length of S ≤ 100 
+
+Example 
+Input 
+4231576 
+
+Output 
+4263157
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const S = readline();
+let even = "";
+let odd = "";
+for(let ch of S){
+        if(parseInt(ch) % 2 === 0) even+=ch;
+        else odd+=ch;
+}
+
+console.log(`${even}${odd}`);

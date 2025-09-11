@@ -1,0 +1,31 @@
+You run a Maltese Bichon hotel, and you need to plan how many Maltese Bichon you will be able to accommodate.
+
+Each Maltese Bichon needs 45g of kibble per day as well as a niche to sleep in.
+
+Input
+Line 1 : An integer for your stock of kibble
+Line 2 : An integer for the number of niches
+
+Output
+A line containing the maximum number of Maltese Bichons that the hotel can accommodate per day
+
+Example
+Input
+45
+10
+
+Output
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const kibbles = parseInt(readline());
+const niches = parseInt(readline());
+
+const max = Math.floor(Math.min(kibbles/45, niches))
+
+console.log(max);

@@ -1,0 +1,41 @@
+You must help Gary move X boxes. 
+He can carry one box per N minutes, but he only has T hours to do so. 
+You promised to help, but since you're very lazy, you will only carry 
+the minimum number of boxes that are required for Gary to finish. 
+
+Input 
+Line 1: int X 
+Line 2: int N 
+Line 3: int T 
+
+Output 
+A single integer, representing the number of boxes you must carry. 
+
+Constraints 
+0 <= X < 1000 
+0 < N < 61 
+0 <= T <= 24 
+
+Example 
+Input 
+12 
+10 
+0 
+
+Output 
+12
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const X = parseInt(readline());
+const N = parseInt(readline());
+const T = parseInt(readline());
+
+const boxesGaryCanCarry = Math.floor(T*60 / N);
+const boxesINeedToCarry = Math.max(0, X - boxesGaryCanCarry);
+
+console.log(boxesINeedToCarry);

@@ -1,0 +1,38 @@
+Find each occurrence of word 'the' in the input string, case insensitive, and count them. 
+The word the has to be its own word, and not a part of another word: 
+e.g. 'furthermore' doesn't count. 
+
+Input 
+The input is a string of plain text English containing, among others, the word 'the'. 
+
+Output 
+Number of occurrences of the word the in the string given as input 
+
+Constraints 
+0 < length of input < 1024 
+
+Example 
+Input 
+The goal of this challenge is to find a particular word. 
+
+Output 
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const s = readline();
+
+// Use regex to match whole word 'the', case-insensitive
+const matches = s.match(/\bthe\b/gi);
+//explanation of this ->
+// \b ensures “the” is matched as a whole word.
+// i flag makes it case-insensitive.
+// g flag allows matching all occurrences.
+
+const count = matches? matches.length : 0;
+
+console.log(count);

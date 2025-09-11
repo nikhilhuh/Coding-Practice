@@ -1,0 +1,46 @@
+The government of the fictional country, New Fa, has an unusual system 
+of age calculation. Whenever a person's birthday is, the person's age in 
+years increases by one on the New Year's Day. 
+
+For example, 
+Emma's birth date was December 31st, 2022, so Emma became 1-year-old on January 1st, 2023. 
+
+As another example - 
+John's birthday is January 1st, so he became 1-year-old on the day he was born. 
+
+Given the birthDate of a person, your task is to output the age of the person 
+in years using New Fa government's age calculation system. 
+
+For example, 
+if birthDate is 2022/12/31 and year is 2023, the output should be 1. 
+
+Input 
+Line 1: A string birthDate in the format of YYYY/MM/DD of a person 
+Line 2: An integer year 
+
+Output 
+Line 1 : The age of the person as of year 
+
+Constraints 
+0 ≤ year < 10000 
+year is always the person's birthyear or later. 
+
+Example 
+Input 
+2022/12/31
+2023
+
+Output 
+1
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const [birthYear, birthMonth, birthDay] =  readline().split("/").map(Number);
+const currYear = parseInt(readline());
+
+const age = currYear - birthYear;
+if(birthMonth === 1 && birthDay === 1) age++;
+
+console.log(age);

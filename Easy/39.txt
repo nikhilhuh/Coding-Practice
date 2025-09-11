@@ -1,0 +1,47 @@
+You are given a 8 x 8 grid of letters and you have to find the position of character 'c' (case sensitive)
+in that grid and print them separated by space. 
+Each occurence should be printed.
+The indexing of the grid is like a chess board, row starting from 'a' and column from '1'. 
+
+Input 
+Line 1: the character 'c' whose indexes has to be found
+Next 8 Lines: string s representing 8 elements of the row (non-separated)  
+
+Output 
+Positions of the character 'c' in the grid 
+
+Constraints 
+'a' || 'A' =< c =< 'z' || 'Z' 
+
+Example 
+Input 
+L
+OOOOLOOO
+O1OOOGOL
+0001JUOO
+LOOOOLLO
+OOOOOOOO
+OOOOOOOL
+OOOOLOOO
+OOOOPIOL
+
+Output 
+a5 b8 d1 d6 d7 f8 g5 h8
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const c = readline();
+
+let positions = [];
+for(let i=1;i<=8;i++){
+        const s = readline().split("");
+
+        s.forEach((ch, idx)=>{
+                if(ch === c) positions.push(`${String.fromCharCode(96 + i)}${idx + 1}`);
+        })
+}
+
+console.log(positions.join(" "));

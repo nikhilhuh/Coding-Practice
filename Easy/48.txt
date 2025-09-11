@@ -1,0 +1,47 @@
+you must draw the place of impact of the AirStrike on a square map of length 5
+
+- The Y axis will be represented by |
+- The X axis will be represented by -
+- The intersection of these axes which is equal to the coordinate of the AirStrike will be represented by a +
+- Other spaces will be represented by a .
+- The coordinate 0,0 is in the upper left corner
+
+Input
+Line 1: An integer x and integer y for the coordinate X,Y of AirStrike
+
+Output
+a map where the AirStrike is displayed
+
+Constraints
+0 ≤ x,y ≤ 4
+
+Example
+Input
+1 2
+
+Output
+.|...
+.|...
+-+---
+.|...
+.|...
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+let [y, x] = readline().split(" ").map(Number);
+
+for (let i = 0; i < 5; i++) {
+    let row = [];
+    for (let j = 0; j < 5; j++) {
+        if (j === y && i === x) row.push("+"); // intersection
+        else if (j === y) row.push("|");      // Y-axis
+        else if (i === x) row.push("-");      // X-axis
+        else row.push(".");                   // empty
+    }
+    console.log(row.join(""));
+}
+
