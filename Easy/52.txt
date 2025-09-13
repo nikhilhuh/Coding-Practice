@@ -1,0 +1,30 @@
+Some strings are just too complicated, they would be much simpler if 
+they didn't have so many different characters. 
+
+Remove all characters from the given string, except for letters and spaces. 
+
+Input 
+A single line of text. 
+
+Output 
+A single line of text containing alpha characters and spaces. 
+
+Constraints 
+Text will be printable ASCII. 
+
+Example 
+Input 
+Hello, World! 
+
+Output 
+Hello World
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const s = readline();
+const result = s.replace(/[^a-zA-Z ]/g, "");
+console.log(result)

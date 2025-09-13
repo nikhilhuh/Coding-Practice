@@ -1,0 +1,31 @@
+Sum of natural numbers from a to b inclusively
+
+Input
+Line 1 : Two space-separated integers a and b
+
+Output
+Line1 : Sum of natural numbers from a to b
+
+Constraints
+0 < a < b < 1000000
+
+Example
+Input
+5 6
+
+Output
+11
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const [a,b] = readline().split(" ").map(Number);
+let sum= 0;
+for(let i=a;i<=b;i++){
+    sum+=i;
+}
+
+console.log(sum);

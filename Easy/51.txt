@@ -1,0 +1,63 @@
+Print the product of all found indices. 
+Given a string S (input line 1) and a line of space separated characters 
+CHARS (input line 2), you must output the product (multiplication result) 
+of all the indices (index plural) of the given characters of CHARS found in S. 
+
+Output "NONE" if no characters of CHARS are found in S. 
+Note: in CHARS, ignore the spaces between non-whitespace characters. 
+The spaces are not to be considered as playing characters in this clash. 
+Note 2: The characters in CHARS and S are Case Sensitive. 
+
+Example: 
+Input 
+Line 1: S = "The quick brown fox jumps over the lazy dog" 
+Line 2: CHARS = "h q n" 
+
+Output 
+1792 
+Because h's indices are 1 & 32, q's index is 4 and n's index is 14, and 1*32*4*14 = 1792. 
+
+Input 
+Line 1: A string S. 
+Line 2: A string CHARS, a line of space separated characters . 
+
+Output 
+Line 1: The product of every character of CHARS's index in S. 
+
+Output "NONE" if no characters of CHARS are found in S. 
+
+Constraints 
+0 ≤ S ≤ 100 
+0 ≤ CHARS < 10 
+
+Example 
+Input 
+The quick brown fox jumps over the lazy dog 
+h q n 
+
+Output 
+1792
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const s = readline();
+const chars = readline().split(" ");
+
+let product = 1;
+let found = false;
+
+for(let ch of chars){
+        for(let i=0; i<=s.length; i++){
+                if(s[i] === ch){
+                        product *= i;
+                        found = true;
+                }
+        }
+}
+
+if(found) console.log(product);
+else console.log("NONE");

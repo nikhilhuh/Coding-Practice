@@ -1,0 +1,37 @@
+Part 1: 
+Find the factorial of the number, num 
+
+Part 2: Find the square root of your result 
+
+Input 
+The number, num 
+
+Output
+After you found the factorial of num, print the square root of your result to the nearest hundredth place. 
+
+Constraints 
+0 < num < 2000 
+
+Example 
+Input 
+1 
+
+Output 
+1.00
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const num = parseInt(readline());
+
+let fact = 1n; //big int to avoid overflow
+
+for(let i=2n;i<=BigInt(num);i++){
+        fact*=i;
+}
+
+const result = Math.sqrt(Number(fact)).tofixed(2);
+console.log(result);

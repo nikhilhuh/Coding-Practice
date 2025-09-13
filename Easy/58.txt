@@ -1,0 +1,26 @@
+You have to print first n digits of pi .
+
+Input
+Line 1 : The number n
+
+Output
+Line 1 : first n digits of pi
+
+Constraints
+0 < n < 15
+
+Example
+Input
+5
+
+Output
+31415
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+n=+readline()
+console.log(String(Math.PI).replace(".","").slice(0,n))

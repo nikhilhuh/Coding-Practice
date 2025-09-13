@@ -1,0 +1,48 @@
+Given the lengths of the three sides of a triangle, a, b and c, calculate the perimeter of said triangle if it is a RIGHT triangle (one angle is 90°).
+
+If the three side lengths given are not able to form a RIGHT triangle, print invalid. This could be the case if either
+• A length is negative or zero
+• The lengths are mismatched. You might test this using the Pythagorean theorem: a² + b² = c²
+
+Hint: You don't really need to google any formulas for this one. Perimeter = a+b+c
+
+Input
+Line 1: An integer a containing the length of side a.
+Line 2: An integer b containing the length of side b.
+Line 3: An integer c containing the length of side c.
+
+Output
+Line 1 : The perimeter of the triangle or the string literal invalid.
+
+Constraints
+a, b, c are all integers
+a + b + c <= 3000
+
+Example
+
+Input
+3
+4
+5
+
+Output
+12
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const a = parseInt(readline());
+const b = parseInt(readline());
+const c = parseInt(readline());
+
+//only checking if sides are greater than 0 and if c^2 = a^2 + b^2 as question says that otherwise we would have checked 
+//all three cases of c^2 = a^2 + b^2 or a^2 = b^2 + c^2 or b^2 = a^2 + c^2
+
+if (a > 0 && b > 0 && c > 0 && a*a + b*b === c*c) {
+    console.log(a + b + c);
+} else {
+    console.log("invalid");
+}

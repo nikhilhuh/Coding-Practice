@@ -1,0 +1,36 @@
+You are a general in the military and you should determine whether a person must go to the military or not, you will be given their age and gender, male M or female F.
+
+print May go to the military if the person is 18-35 year old male
+print Can't go to the military if the person is a female, or a male who is under 18
+print Was already in the military if the person is a male who is over 35
+
+Input
+Line 1: a string g: their gender M or F
+Line 2: an integer a: their age
+
+Output
+a string s: The status of the person
+
+Constraints
+100>a>0
+
+Example
+Input
+M
+9
+
+Output
+Can't go to the military
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const g = readline();
+const a = parseInt(readline());
+
+if (g === "M" && a >= 18 && a <= 35) console.log("May go to the military");
+else if (g === "M" && a > 35) console.log("Was already in the military");
+else console.log("Can't go to the military");
