@@ -1,0 +1,32 @@
+In a town there are X men, each man has X wives and each wife has X kids,
+you should print the total T number of people in this town. 
+
+Input 
+One line: The integer X 
+
+Output 
+One line: The total T number of people in this town 
+
+Constraints 
+0 ≤ X ≤ 300 
+
+Example 
+Input 
+7 
+
+Output 
+399
+
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const X = parseInt(readline());
+
+const total = X + X**3 + X**3;
+//Men: 7 Wives: 7² = 49 Kids: 7³ = 343 Total = 7 + 49 + 343 = 399
+
+console.log(total);

@@ -1,0 +1,32 @@
+Your program must output only the capital letters of the string given as input.
+
+INPUT:
+A string S.
+
+OUTPUT:
+A string containing S stripped of all characters except capital letters.
+
+CONSTRAINTS:
+S contains at least 1 capital letter.
+S contains less than 100 characters.
+
+EXAMPLE:
+Input
+.2A1N5Y64! §C*H*zAtrR
+
+Output
+ANYCHAR
+ 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const S = readline();
+
+// Use regex to match all capital letters
+const capitals = S.match(/[A-Z]/g);
+
+console.log(capitals.join(""));

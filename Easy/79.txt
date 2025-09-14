@@ -1,0 +1,56 @@
+Cody is a programmer, who likes to make CoC's. 
+He must carry out long, tedious, and boring tasks just to get his contribution 
+to the company accepted. If he gets it approved unanimously by any three passers-by, 
+his contribution will be uploaded into the community's "CoC" database. 
+If he does not get it approved, he will be humiliatingly "laid off".
+
+Cody has n days left to get it validated.
+Each day, he fixes f errors.
+Each day, he gets e new errors.
+If Cody has less than 5 errors at the deadline, his contribution will be accepted.
+If he has 5 to 9 errors, his contribution will be rejected.
+If he has 10 errors or more, Cody will be fired.
+
+Can he get his contribution approved in time?
+If he can output: Contribution Accepted!
+If he can't output: Contribution Rejected!
+Otherwise output: CODY. YOU'RE SACKED, FIRED AND KICKED OUT OF THE COMMUNITY!!!
+
+!PLEASE NOTE THAT CODY ALWAYS STARTS WITH 0 ERRORS AT THE START OF DAY 1!
+Input
+Line 1: n the number of days left before the deadline.
+Line 2: f the number of errors he fixes each day.
+Line 3: e the number of errors that pop up each day.
+Output
+# The corresponding message. #
+Constraints
+n, f and e are always integers.
+
+0 <= n, f and e <= 10
+Example
+Input
+10
+2
+1
+
+Output
+Contribution Accepted!
+ 
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const n = parseInt(readline());
+const f = parseInt(readline());
+const e = parseInt(readline());
+
+const errors = Math.max(0, n*e - n*f); 
+//because errors left can't be less than 0
+
+if(errors >= 10) console.log("CODY. YOU'RE SACKED, FIRED AND KICKED OUT OF THE COMMUNITY!!!");
+else if(errors >= 5) console.log("Contribution Rejected!");
+else console.log("Contribution Accepted!");
+

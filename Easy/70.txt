@@ -1,0 +1,28 @@
+On an e-commerce website, we need to generate a star rating system 
+based on all ratings a product has received, rounded down. 
+
+Input 
+Line 1: A set of received notes separated by a comma. 
+
+Output 
+Line 1: A line comprising a set of characters * representing the average score of all received scores. 
+
+Constraints 
+Example 
+Input 
+1,1,1 
+
+Output 
+*
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const ratings = readline().split(",").map(Number);
+
+const total = ratings.reduce((acc, v)=> acc + v,0);
+const average = Math.floor(total / ratings.length);
+console.log("*".repeat(average));

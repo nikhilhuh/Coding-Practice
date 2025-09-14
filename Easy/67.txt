@@ -1,0 +1,46 @@
+Output the Manhattan distance between the "$" characters on an N x N grid. 
+Manhattan distance is the horizontal distance + vertical distance. 
+
+Input 
+Line1: An integer N for the side length of the grid. 
+Next N lines: The N x N grid 
+
+Output 
+Line 1: TheManhattan distance between the "$" characters.
+
+Constraints 
+4 ≤ N ≤ 20 
+
+Example 
+Input 
+4 
+**** 
+*$$* 
+* * 
+**** 
+
+Output 
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const n = parseInt(readline()); 
+
+let positions = [];
+
+for (let i = 0; i < n; i++) { 
+        const row = readline();
+        for(let j=0;j<n;j++){
+                if(row[j] === "$") positions.push([i,j]);
+        } 
+}
+
+const [x1,y1] = positions[0];
+const [x2,y2] = positions[1];
+
+const distance = Math.abs(x2 - x1) + Math.abs(y2 - y1);
+console.log(distance);

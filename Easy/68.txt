@@ -1,0 +1,42 @@
+You get a character c and a string s.
+Your task is to print the sum of all indexes of c in s. The index of the first character is 0!
+
+Example:
+c = o
+s = hello world
+
+"o" is the fifth and the eighth character: Index 4 + Index 7 = 11
+
+Input
+Line 1: A character c
+Line 2: A string s
+
+Output
+Line 1: The sum of all indexes of c in s. Pay attention on UPPER- and lowercase.
+
+Constraints
+Length of c = 1
+1 ≤ length of s ≤ 200
+
+Example
+Input
+e
+hello
+
+Output
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const c = readline();
+const s = readline().split("");
+
+let sum = 0;
+s.forEach((ch, i)=> {
+    if(ch === c) sum+=i;
+})
+console.log(sum);

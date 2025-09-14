@@ -1,0 +1,31 @@
+Hamza want to read message from his boyfriend, 
+but there are many numbers Help Hamza to read his name! 
+
+Input 
+given string s 
+
+Output 
+print string without numbers 
+
+Constraints 
+1 <= length of s <= 100 
+
+Example 
+Input 
+H2a3m12z13a4i O45t67a78l8a 
+
+Output 
+Hamzai Otala
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const s = readline();
+
+//using regex to rmeove digits
+const result = s.replace(/[0-9]/g,"");
+
+console.log(result);

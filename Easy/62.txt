@@ -1,0 +1,54 @@
+Write a program or function that takes 2 whole numbers (p1 and p2) from user input. With those two variables, take a sum of all even numbers from p1 to p2, including those 2 numbers.
+
+Example:
+Inputs:
+p1 = 1
+
+p2 = 10
+
+Result:
+result = 2 + 4 + 6 + 8 + 10 = 30
+
+
+If p1 is bigger than p2, just print 0, but if it is equals, still print the result
+
+Hine: Make it work with large integers as well
+
+Input
+p1 : A number (64-bit signed integer) to start from
+p2 : A number (64-bit signed integer) to end with
+
+Output
+Line 1 : Sum of even numbers in between number p1 and number p2 (including those 2 numbers)
+
+Constraints
+p1 and p2 are whole numbers.
+p1 should be lower than (or equal to) p2
+
+Example
+Input
+1
+10
+
+Output
+30
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const p1 = BigInt(readline());
+const p2 = BigInt(readline());
+
+if (p1 > p2) console.log(0)
+else {
+    let start = p1 % 2n === 0n ? p1 : p1 + 1n;
+    let end = p2 % 2n === 0n ? p2 : p2- 1n;
+    
+    const count = ((end - start) / 2n) + 1n;
+    const sum = (start + end) * count / 2n;
+    console.log(sum.toString());
+
+}

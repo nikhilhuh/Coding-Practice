@@ -1,0 +1,57 @@
+Your task is to write a program that calculates the total calories from a meal. You will be given a list of foods with their calorie values and a separate list of what was eaten.
+
+Input
+Line 1: An integer N for the number of items in the food database.
+Next N lines: A word food_name and an integer calories per serving for each food item.
+Next line: An integer M for the number of food items consumed.
+Next M lines: A word consumed_food and an integer servings for each consumed item.
+
+Output
+Line 1: A single integer representing the total calories consumed.
+
+Constraints
+1≤ N ≤10
+0≤ M ≤10
+0≤ calories ≤1000
+1≤ servings ≤10
+food_name does not contain any space characters.
+Every food_name in the list of calories in food is unique.
+consumed_food is always one of the food_names
+
+Example
+Input
+3
+apple 95
+banana 105
+sandwich 400
+2
+apple 1
+sandwich 2
+
+Output
+895
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const N = parseInt(readline());
+let food = {};
+
+for (let i = 0; i < N; i++) {
+    const [name , calories] = readline().split(' ');
+    food[name] = calories;
+}
+
+const M = parseInt(readline());
+let totalCalories = 0;
+
+for (let i = 0; i < M; i++) {
+    const [name , servings] = readline().split(' ');
+    totalCalories += food[name] * servings;
+}
+
+
+console.log(totalCalories);

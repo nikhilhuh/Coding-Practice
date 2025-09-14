@@ -1,0 +1,48 @@
+In a distant land, a treasure map is given to you in the form of a string. 
+The string contains characters representing the directions to follow: 
+N: North 
+S: South 
+E: East 
+W: West 
+Each character indicates a step in that direction. 
+Your task is to determine the final coordinates of the treasure starting from the origin (0, 0). 
+Moving N increases the y-coordinate by 1. 
+Moving S decreases the y-coordinate by 1. 
+Moving E increases the x-coordinate by 1. 
+Moving W decreases the x-coordinate by 1. 
+
+You need to output the final coordinates as a string in the format "(x, y)". 
+
+Input 
+A single string containing characters N,S,E and W. 
+
+Output 
+A string representing the final coordinates in the format "(x,y)". 
+
+Constraints 
+Example 
+Input 
+NNESW 
+
+Output 
+(0,1)
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const directions = readline();
+
+let x= 0;
+let y= 0;
+
+for(let ch of directions){
+        if(ch === "N") y++;
+        else if(ch === "S") y--;
+        else if(ch === "E") x++;
+        else if(ch === "S") x--;
+}
+
+console.log(`(${x},${y})`);

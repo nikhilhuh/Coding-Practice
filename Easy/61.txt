@@ -1,0 +1,45 @@
+We are in the middle of a war and messages have been encrypted. You, as a receiver, have to figure out how the messages are encrypted. (Each follows a different pattern of shifting letter along the alphabets)
+
+Input
+Line 1: A random string of letters
+Line 2: Encoded strings
+Line 3: Strings that needed to be encrypted
+
+Output
+Encoded string
+
+Constraints
+string input size < 50
+
+Example
+Input
+abcd
+cdef
+time
+
+Output
+vkog
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const mes1 = readline();
+const encoded1 = readline();
+const mes2 = readline();
+
+const shift = (encoded1.charCodeAt(0) - mes1.charCodeAt(0) + 26 ) % 26;
+
+let encoded2 = "";
+for(let ch of mes2){
+        if(ch!== " "){
+                const base = ch >= 'A' && ch <= 'Z' ? 65 : 97;
+                encoded2 += String.fromCharCode(((ch.charCodeAt(0) + shift - base) % 26) + base);
+        } else {
+                encoded2 += " ";
+        }
+}
+
+console.log(encoded2);
