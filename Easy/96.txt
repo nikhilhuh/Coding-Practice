@@ -1,0 +1,40 @@
+Given the number of sides N of a regular polygon and the length L of each side, 
+return the area of this regular polygon, rounded to the closest integer.
+
+Input
+Line 1: the number N of sides
+Line 2: the length L of each side
+
+Output
+Line 1: the area of the regular polygon with N sides of length L, rounded to the closest integer.
+
+Constraints
+3 ≤ N ≤ 100
+0 ≤ L ≤ 100
+
+Example
+Input
+4
+1
+
+Output
+1
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//based on math formulae , you could google it as well
+//read inputs
+const N = parseInt(readline());
+const L = parseInt(readline());
+
+if (L === 0) {
+  console.log(0);
+} else {
+  const area = (N * (L ** 2)) / (4 * Math.tan(Math.PI / N));
+  console.log(Math.round(area));
+}
+
+

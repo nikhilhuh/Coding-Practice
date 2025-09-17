@@ -1,0 +1,33 @@
+Sum the alphabet index of each character in the given word.
+
+Input
+String s.
+
+Output
+An integer N, sum of the characters in s.
+
+Constraints
+s is one word
+0 < length < 50
+
+Example
+Input
+Math
+
+Output
+42
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const s = readline();
+let sum = 0;
+
+for(let ch of s.toLowerCase()){
+        sum += ch.charCodeAt(0) - 96;
+}
+
+console.log(sum);

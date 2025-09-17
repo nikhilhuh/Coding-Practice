@@ -1,0 +1,32 @@
+Replace the beginning of the second line SECOND with the first line FIRST
+
+Input
+Line 1: Replacement source FIRST
+Line 2: Replacement target SECOND
+
+Output
+The resulting string after replacement
+
+Constraints
+1 ≤ length of FIRST ≤ 100
+1 ≤ length of SECOND ≤ 100
+length of FIRST ≤ length of SECOND
+
+Example
+Input
+APP
+TITLE
+
+Output
+APPLE
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const FIRST = readline();
+const SECOND = readline();
+
+console.log(FIRST + SECOND.slice(FIRST.length))

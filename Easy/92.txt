@@ -1,0 +1,43 @@
+You are given a string of length L.
+This string contains exactly two characters that appear only once.
+You need to output a string in which those characters are swapped.
+
+Input
+Line 1: A string of length L
+
+Output
+Line 1: A string in which characters that appear only once have been swapped
+
+Constraints
+2 ≤ L ≤ 100
+
+Example
+Input
+reverse
+
+Output
+reserve
+ 
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const input = readline();
+let count = {};
+
+for(let ch of input){
+    count[ch] = (count[ch] ?? 0) + 1;
+}
+
+const [a,b] = Object.keys(count).filter(ch => count[ch] === 1);
+
+let result = "";
+for(let ch of input){
+    if(ch === a) result += b;
+    else if(ch === b) result += a;
+    else result += ch;
+}
+
+console.log(result);

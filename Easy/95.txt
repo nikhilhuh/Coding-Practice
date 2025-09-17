@@ -1,0 +1,38 @@
+For each character in the input string, convert it to its ASCII code, 
+then write that number in binary. 
+Count how many 1's appear in the binary representation of all characters combined.
+
+Input
+Line 1: A string s that may contain letters, digits, spaces, and symbols.
+
+Output
+Line 1: An integer: the total number of 1 bits in the binary representation of 
+all characters of s.
+
+Constraints
+1 ≤ length of s ≤ 1000
+s may contain any ASCII character (code 0–127)
+
+Example
+Input
+aA
+
+Output
+5
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const s = readline();
+
+let count = 0;
+for (let ch of s) {
+  const code = ch.charCodeAt(0);
+  // Count 1s in binary representation
+  count += code.toString(2).split("1").length - 1;
+}
+
+console.log(count);

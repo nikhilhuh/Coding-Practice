@@ -1,0 +1,53 @@
+Determine the sum of all integer values between inputs 
+A and B if A <= B else find the integer difference if A > B.
+A and B are included in both totals.
+
+Example
+A=5 B=10
+should output 45. Since 5 <= 10 perform 5 + 6 + 7 + 8 + 9 + 10
+
+A=10 B=5
+should output -25. Since 10 > 5 perform 10 - 9 - 8 - 7 - 6 - 5
+
+Input
+Line 1 The integer A
+Line 2 The integer B
+
+Output
+Line 1 A single line containing either the sum or the difference of the values between A and B.
+
+Constraints
+-2^31 <= A <= 2^31
+-2^31 <= B <= 2^31
+
+Example
+Input
+1
+10
+
+Output
+55
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const A = BigInt(readline());
+const B = BigInt(readline());
+
+let result;
+
+if (A <= B) {
+  // arithmetic series sum from A to B
+  const n = B - A + 1n;
+  result = (n * (A + B)) / 2n;
+} else {
+  // difference case
+  const n = A - B;
+  const sumBetween = (n * (B + (A - 1n))) / 2n; // sum from B to A-1
+  result = A - sumBetween;
+}
+
+console.log(result.toString());

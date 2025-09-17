@@ -1,0 +1,37 @@
+A stationary rocket is launched and travels with a constant acceleration 
+of 2 m/s² (meters per second squared).
+This means that every second the rocket's speed increases by 2 meters per second.
+
+The rocket reaches its goal in n seconds.
+
+Print the distance traveled (in meters) by the rocket.
+
+Input
+n: an integer representing the duration of the rocket's flight (in seconds)
+
+Output
+d : the distance traveled by the rocket (in meters)
+
+Constraints
+0 < n < 10000
+
+Example
+Input
+101
+
+Output
+10201
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read inputs
+const t = parseInt(readline());
+
+//to calculate distance the formula is -> vo + ((a* t^2)/2) 
+//since initial velocity is 0 so distance will be a * t^2 /2 and a is 2 so d is t^2
+
+const distance = t * t;
+console.log(distance);

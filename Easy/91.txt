@@ -1,0 +1,40 @@
+Given two angles you must output if they are 
+SUPPLEMENTARY (totaling 180), COMPLEMENTARY (totaling 90) or NEITHER.
+
+Input
+Line 1: A single integer n for the amount of number pairs
+n lines: A space separated integer pair a1 and a2.
+
+Output
+n lines containing SUPPLEMENTARY, COMPLEMENTARY or NEITHER.
+
+Constraints
+180 > a1 > 0
+180 > a2 > 0
+
+Example
+Input
+2
+90 90
+45 45
+
+Output
+SUPPLEMENTARY
+COMPLEMENTARY
+ 
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+const n = parseInt(readline());
+
+for (let i = 0; i < n; i++) {
+  const [a1, a2] = readline().split(" ").map(Number);
+  
+  if (a1 + a2 === 180) console.log("SUPPLEMENTARY");
+  else if (a1 + a2 === 90) console.log("COMPLEMENTARY");
+  else console.log("NEITHER");
+}
+

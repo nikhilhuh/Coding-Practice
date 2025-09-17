@@ -1,0 +1,42 @@
+In the game of cribbage you have 5 cards with suit numbers between 1 and 4. 
+A flush scores 4 or 5 when 4 or 5 of the cards have the same suit. 0 is scored otherwise.
+
+Input
+5 lines containing the suit numbers of CARDs you hold.
+
+Output
+Line 1: The flush score of the cards
+
+Constraints
+1 <= CARD <= 4
+
+Example
+Input
+2
+2
+2
+2
+2
+
+Output
+5
+
+
+
+
+-------Only see the solution after putting your efforts into it---------
+
+//read input
+let suits = [];
+for (let i = 0; i < 5; i++) {
+  suits.push(parseInt(readline()));
+}
+
+let counts = {};
+for (let s of suits) counts[s] = (counts[s] ?? 0) + 1;
+
+let maxCount = Math.max(...Object.values(counts));
+
+if (maxCount === 5) console.log(5);
+else if (maxCount === 4) console.log(4);
+else console.log(0);
