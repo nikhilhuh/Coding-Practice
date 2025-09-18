@@ -1,13 +1,21 @@
-The objective of the game of Super Simple Sudoku is to fill a 9 x 9 square grid with digits 1 - 9 such that no row or column contain duplicate digits.
+The objective of the game of Super Simple Sudoku is to fill a 9 x 9 square 
+grid with digits 1 - 9 such that no row or column contain duplicate digits.
 
-You are given an almost-completed Super Simple Sudoku board, where each missing digit is the only possible digit in its row and/or the only possible digit in its column. In other words, it is possible to fill in the missing digits independently. Complete the Super Simple Sudoku!
+You are given an almost-completed Super Simple Sudoku board, where each 
+missing digit is the only possible digit in its row and/or the only possible 
+digit in its column. In other words, it is possible to fill in the missing digits independently. 
+Complete the Super Simple Sudoku!
+
 Input
 The input is exactly 9 rows, each containing exactly 17 characters.
 - The digit characters (1 - 9) denote the filled-in numbers of the Super Simple Sudoku grid.
 - Cells in each row of the grid are padded by spaces (" ").
 - Missing digits are represented by the question mark (?).
+
 Output
-The same 9 x 17 character grid, with all the (?) character(s) replaced with the appropriate missing digit, according to the Super Simple Sudoku rules.
+The same 9 x 17 character grid, with all the (?) character(s) replaced with 
+the appropriate missing digit, according to the Super Simple Sudoku rules.
+
 Constraints
 - It is possible to determine each missing digit via brute force.
 - There will only be one possible solution.
